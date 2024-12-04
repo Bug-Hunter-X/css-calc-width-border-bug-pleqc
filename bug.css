@@ -1,0 +1,10 @@
+The following CSS rule has a potential issue:
+
+```css
+div {
+  width: calc(100% - 20px);
+  border: 10px solid red;
+}
+```
+
+The `calc()` function calculates the width of the div, subtracting 20px from 100%.  However, the border adds 20px (10px on each side) to the div's total width.  This means the div's rendered width will actually be 100%, not the intended 100% - 20px. 
